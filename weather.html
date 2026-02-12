@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samuel Amoah Sefa — Weather</title>
+  <meta name="description" content="Current weather for Samuel Amoah Sefa's location." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a class="logo" href="index.html">SAS</a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="projects.html">Projects</a>
+        <a class="active" href="weather.html">Weather</a>
+        <a href="music.html">Music</a>
+        <a href="movies.html">Movies</a>
+        <a href="contact.html" class="btn small">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container page">
+    <div class="page-head">
+      <h1>Weather Near Me</h1>
+      <p class="muted">Uses your browser location to show local weather.</p>
+    </div>
+
+    <section class="card" id="weatherCard">
+      <h2>Loading weather…</h2>
+      <p class="muted">If prompted, allow location access.</p>
+    </section>
+
+    <section class="card" id="forecastCard" style="margin-top:1rem; display:none;">
+      <h2>3-Day Forecast</h2>
+      <div id="forecastGrid" class="forecast-grid"></div>
+    </section>
+
+    <section class="card" style="margin-top:1rem;">
+      <h2>Note</h2>
+      <p class="muted">
+        Weather is pulled from Open-Meteo (no API key). Your location is only used in your browser.
+        Location access works best on HTTPS (GitHub Pages is HTTPS).
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p class="muted">© <span id="year"></span> Samuel Amoah Sefa</p>
+  </footer>
+
+  <div id="chatbot-root"></div>
+  <script src="script.js"></script>
+</body>
+</html>

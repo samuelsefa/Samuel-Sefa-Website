@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samuel Amoah Sefa — Music</title>
+  <meta name="description" content="Recommended music with search, filters, and favorites." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav container">
+      <a class="logo" href="index.html">SAS</a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="projects.html">Projects</a>
+        <a href="weather.html">Weather</a>
+        <a class="active" href="music.html">Music</a>
+        <a href="movies.html">Movies</a>
+        <a href="contact.html" class="btn small">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container page">
+    <div class="page-head">
+      <h1>Music</h1>
+      <p class="muted">Search • mood filters • favorites (saved in your browser).</p>
+    </div>
+
+    <section class="card controls">
+      <div class="controls-row">
+        <input id="muSearch" class="control-input" type="text" placeholder="Search music (artist, vibe, genre)..." />
+        <button class="btn ghost" type="button" id="muClear">Clear</button>
+      </div>
+
+      <div class="filter-row" id="muFilters">
+        <button type="button" class="filter-btn active" data-filter="all">All</button>
+        <button type="button" class="filter-btn" data-filter="focus">Focus</button>
+        <button type="button" class="filter-btn" data-filter="gym">Gym</button>
+        <button type="button" class="filter-btn" data-filter="chill">Chill</button>
+        <button type="button" class="filter-btn" data-filter="afrobeats">Afrobeats</button>
+        <button type="button" class="filter-btn" data-filter="hiphop">Hip-Hop</button>
+      </div>
+
+      <p class="muted tiny">Tip: click ⭐ to save favorites. Click ▶ to open YouTube search.</p>
+    </section>
+
+    <section class="card" style="margin-top:1rem;">
+      <div class="section-row">
+        <h2 style="margin:0;">My Favorites</h2>
+        <button class="btn ghost" type="button" id="muClearFavs">Clear Favorites</button>
+      </div>
+      <div id="muFavs" class="list-grid"></div>
+      <p id="muFavsEmpty" class="muted tiny" style="margin: .5rem 0 0;">No favorites yet. Star a track/playlist to save it here.</p>
+    </section>
+
+    <section class="card" style="margin-top:1rem;">
+      <div class="section-row">
+        <h2 style="margin:0;">Recommended</h2>
+        <span class="muted tiny" id="muCount"></span>
+      </div>
+      <div id="muList" class="list-grid"></div>
+    </section>
+
+    <section class="card" style="margin-top:1rem;">
+      <h2>Featured (Example Embed)</h2>
+      <p class="muted">Replace the embed anytime.</p>
+
+      <div class="embed-wrap">
+        <iframe
+          class="embed"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Featured music"
+          frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p class="muted">© <span id="year"></span> Samuel Amoah Sefa</p>
+  </footer>
+
+  <div id="chatbot-root"></div>
+  <script src="script.js"></script>
+
+  <!-- Page config for JS (music) -->
+  <script>
+    window.PAGE_RECS = {
+      pageKey: "music",
+      searchId: "muSearch",
+      clearId: "muClear",
+      filtersId: "muFilters",
+      listId: "muList",
+      countId: "muCount",
+      favsId: "muFavs",
+      favsEmptyId: "muFavsEmpty",
+      clearFavsId: "muClearFavs",
+      items: [
+        { id:"mu_focus_lofi", type:"playlist", title:"Lo-Fi Focus Beats", tags:["focus","study","lofi"], category:"focus",
+          trailer:"https://www.youtube.com/results?search_query=lofi+beats+to+study+to" },
+        { id:"mu_focus_piano", type:"playlist", title:"Piano Focus / Deep Work", tags:["focus","piano","study"], category:"focus",
+          trailer:"https://www.youtube.com/results?search_query=piano+focus+music" },
+
+        { id:"mu_gym_hiphop", type:"playlist", title:"Gym Hip-Hop Mix", tags:["gym","energy","hiphop"], category:"gym",
+          trailer:"https://www.youtube.com/results?search_query=gym+hiphop+playlist" },
+        { id:"mu_gym_hype", type:"playlist", title:"Hype Workout Playlist", tags:["gym","hype","energy"], category:"gym",
+          trailer:"https://www.youtube.com/results?search_query=workout+hype+playlist" },
+
+        { id:"mu_chill_rnb", type:"playlist", title:"Chill R&B Vibes", tags:["chill","rnb","night"], category:"chill",
+          trailer:"https://www.youtube.com/results?search_query=chill+rnb+playlist" },
+        { id:"mu_chill_afro", type:"playlist", title:"Chill Afrobeats", tags:["chill","afrobeats","vibes"], category:"chill",
+          trailer:"https://www.youtube.com/results?search_query=chill+afrobeats+playlist" },
+
+        { id:"mu_afro_burna", type:"artist", title:"Burna Boy (Afrobeats)", tags:["afrobeats","burna boy"], category:"afrobeats",
+          trailer:"https://www.youtube.com/results?search_query=burna+boy+playlist" },
+        { id:"mu_afro_rema", type:"artist", title:"Rema (Afrobeats)", tags:["afrobeats","rema"], category:"afrobeats",
+          trailer:"https://www.youtube.com/results?search_query=rema+playlist" },
+
+        { id:"mu_hiphop_drake", type:"artist", title:"Drake (Hip-Hop)", tags:["hiphop","drake"], category:"hiphop",
+          trailer:"https://www.youtube.com/results?search_query=drake+best+songs" },
+        { id:"mu_hiphop_travis", type:"artist", title:"Travis Scott (Hip-Hop)", tags:["hiphop","travis"], category:"hiphop",
+          trailer:"https://www.youtube.com/results?search_query=travis+scott+hits" }
+      ]
+    };
+  </script>
+</body>
+</html>

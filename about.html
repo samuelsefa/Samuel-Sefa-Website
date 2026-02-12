@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samuel Amoah Sefa — About</title>
+  <meta name="description" content="About Samuel Amoah Sefa." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a class="logo" href="index.html">SAS</a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a class="active" href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="btn small">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container page">
+    <div class="page-head">
+      <h1>About Me</h1>
+      <p class="muted">Only about me — no projects, no timeline.</p>
+    </div>
+
+    <section class="grid-2">
+      <div class="card">
+        <h2>Summary</h2>
+        <p class="muted">
+          My name is Samuel Amoah Sefa. I’m a Computer Science student at Caldwell University with interests in
+          AI, analytics, and web development. I enjoy building useful products, learning fast, and working on teams.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Education</h2>
+        <p>
+          <strong>Caldwell University</strong> — Caldwell, NJ<br/>
+          B.S. Computer Science<br/>
+          <span class="muted">GPA: 3.4 • Expected Graduation: December 2026</span>
+        </p>
+        <p class="muted">
+          Coursework: Calculus II, Intro to Programming I (C++), Applied CS (Python, SQL),
+          Web Dev (HTML, CSS, JavaScript, Figma).
+        </p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Honors & Awards</h2>
+      <ul class="list">
+        <li>President’s List</li>
+        <li>Honors Student</li>
+        <li>Caldwell University Tuition Scholarship</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Organizations</h2>
+      <ul class="list">
+        <li>National Society of Black Engineers (NSBE)</li>
+        <li>Google Student Developer Club (GDSC)</li>
+        <li>International Student Organization</li>
+        <li>Computer Science Organization</li>
+        <li>Rewriting the Code</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p class="muted">© <span id="year"></span> Samuel Amoah Sefa</p>
+  </footer>
+
+  <div id="chatbot-root"></div>
+  <script src="script.js"></script>
+</body>
+</html>

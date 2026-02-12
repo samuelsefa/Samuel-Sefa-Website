@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samuel Amoah Sefa — Contact</title>
+  <meta name="description" content="Contact Samuel Amoah Sefa." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a class="logo" href="index.html">SAS</a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="projects.html">Projects</a>
+        <a class="active btn small" href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container page">
+    <div class="page-head">
+      <h1>Contact</h1>
+      <p class="muted">Only contact info.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h2>Reach me</h2>
+        <p><strong>Email:</strong> <a class="link" href="mailto:ssefa@caldwell.edu">ssefa@caldwell.edu</a></p>
+        <p><strong>Phone:</strong> <a class="link" href="tel:+18624066258">862-406-6258</a></p>
+        <p><strong>LinkedIn:</strong> <a class="link" href="https://www.linkedin.com/in/samuel-kofi-sefa-amoah/" target="_blank" rel="noreferrer">samuel-kofi-sefa-amoah</a></p>
+        <p class="muted">Resume: <a class="link" href="./resume.pdf" download="Samuel_Amoah_Sefa_Resume.pdf">Download resume.pdf</a></p>
+      </div>
+
+      <form class="card form">
+        <label>
+          Name
+          <input type="text" placeholder="Your name" />
+        </label>
+
+        <label>
+          Email
+          <input type="email" placeholder="you@example.com" />
+        </label>
+
+        <label>
+          Message
+          <textarea rows="5" placeholder="Write your message..."></textarea>
+        </label>
+
+        <button class="btn" type="button" id="fakeSendBtn">Send Message</button>
+        <p class="muted tiny" id="formNote">This form is a demo (no backend connected yet).</p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer container">
+    <p class="muted">© <span id="year"></span> Samuel Amoah Sefa</p>
+  </footer>
+
+  <div id="chatbot-root"></div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samuel Amoah Sefa — Home</title>
+  <meta name="description" content="Samuel Amoah Sefa — Computer Science student portfolio." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a class="logo" href="index.html">SAS</a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="btn small">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <p class="pill">Computer Science • AI • Web Development</p>
+        <h1>Hi, I’m <span class="accent">Samuel Amoah Sefa</span>.</h1>
+
+        <p class="subtext">
+          Computer Science student at Caldwell University (GPA 3.4, expected graduation December 2026).
+          I enjoy building responsive web experiences, working with data, and exploring AI.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn" href="projects.html">View Projects</a>
+          <a class="btn ghost" href="./resume.pdf" download="Samuel_Amoah_Sefa_Resume.pdf">Download Resume</a>
+        </div>
+
+        <div class="social">
+          <a href="https://www.linkedin.com/in/samuel-kofi-sefa-amoah/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="mailto:ssefa@caldwell.edu">Email</a>
+          <a href="tel:+18624066258">Call</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="avatar" aria-label="Profile photo placeholder"><span>SAS</span></div>
+        <div class="card mini">
+          <p class="muted">Explore</p>
+          <p class="muted">
+            Learn more <a class="link" href="about.html">about me</a>, see my <a class="link" href="timeline.html">timeline</a>,
+            or check my <a class="link" href="projects.html">projects</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p class="muted">© <span id="year"></span> Samuel Amoah Sefa</p>
+  </footer>
+
+  <div id="chatbot-root"></div>
+  <script src="script.js"></script>
+</body>
+</html>

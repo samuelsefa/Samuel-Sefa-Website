@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samuel Amoah Sefa — Movies & Videos</title>
+  <meta name="description" content="Recommended movies and videos with search, filters, and favorites." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav container">
+      <a class="logo" href="index.html">SAS</a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="projects.html">Projects</a>
+        <a href="weather.html">Weather</a>
+        <a href="music.html">Music</a>
+        <a class="active" href="movies.html">Movies</a>
+        <a href="contact.html" class="btn small">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container page">
+    <div class="page-head">
+      <h1>Movies & Videos</h1>
+      <p class="muted">Search • filters • favorites (saved in your browser).</p>
+    </div>
+
+    <!-- Controls -->
+    <section class="card controls">
+      <div class="controls-row">
+        <input id="mvSearch" class="control-input" type="text" placeholder="Search movies/videos (e.g., moneyball, coding, fifa)..." />
+        <button class="btn ghost" type="button" id="mvClear">Clear</button>
+      </div>
+
+      <div class="filter-row" id="mvFilters">
+        <button type="button" class="filter-btn active" data-filter="all">All</button>
+        <button type="button" class="filter-btn" data-filter="tech">Tech</button>
+        <button type="button" class="filter-btn" data-filter="finance">Finance</button>
+        <button type="button" class="filter-btn" data-filter="gaming">Gaming</button>
+        <button type="button" class="filter-btn" data-filter="motivation">Motivation</button>
+        <button type="button" class="filter-btn" data-filter="entertainment">Entertainment</button>
+      </div>
+
+      <p class="muted tiny">Tip: click ⭐ on an item to save it to Favorites.</p>
+    </section>
+
+    <!-- Favorites -->
+    <section class="card" style="margin-top:1rem;">
+      <div class="section-row">
+        <h2 style="margin:0;">My Favorites</h2>
+        <button class="btn ghost" type="button" id="mvClearFavs">Clear Favorites</button>
+      </div>
+      <div id="mvFavs" class="list-grid"></div>
+      <p id="mvFavsEmpty" class="muted tiny" style="margin: .5rem 0 0;">No favorites yet. Star a movie/video to save it here.</p>
+    </section>
+
+    <!-- List -->
+    <section class="card" style="margin-top:1rem;">
+      <div class="section-row">
+        <h2 style="margin:0;">Recommended</h2>
+        <span class="muted tiny" id="mvCount"></span>
+      </div>
+      <div id="mvList" class="list-grid"></div>
+    </section>
+
+    <!-- Featured embed -->
+    <section class="card" style="margin-top:1rem;">
+      <h2>Featured Video</h2>
+      <p class="muted">Replace the YouTube embed link anytime.</p>
+
+      <div class="embed-wrap">
+        <iframe
+          class="embed"
+          src="https://www.youtube.com/embed/zOjov-2OZ0E"
+          title="Featured video"
+          frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p class="muted">© <span id="year"></span> Samuel Amoah Sefa</p>
+  </footer>
+
+  <div id="chatbot-root"></div>
+  <script src="script.js"></script>
+
+  <!-- Page config for JS (movies/videos) -->
+  <script>
+    window.PAGE_RECS = {
+      pageKey: "movies",
+      searchId: "mvSearch",
+      clearId: "mvClear",
+      filtersId: "mvFilters",
+      listId: "mvList",
+      countId: "mvCount",
+      favsId: "mvFavs",
+      favsEmptyId: "mvFavsEmpty",
+      clearFavsId: "mvClearFavs",
+      items: [
+        { id:"m_interstellar", type:"movie", title:"Interstellar", tags:["sci-fi","strategy","problem solving"], category:"entertainment",
+          trailer:"https://www.youtube.com/results?search_query=Interstellar+trailer" },
+        { id:"m_social", type:"movie", title:"The Social Network", tags:["startups","entrepreneurship","tech"], category:"tech",
+          trailer:"https://www.youtube.com/results?search_query=The+Social+Network+trailer" },
+        { id:"m_moneyball", type:"movie", title:"Moneyball", tags:["data","analytics","decision making"], category:"finance",
+          trailer:"https://www.youtube.com/results?search_query=Moneyball+trailer" },
+        { id:"m_black_panther", type:"movie", title:"Black Panther", tags:["leadership","innovation","culture"], category:"entertainment",
+          trailer:"https://www.youtube.com/results?search_query=Black+Panther+trailer" },
+
+        { id:"v_learn_coding", type:"video", title:"How to Learn Coding (YouTube Picks)", tags:["learning","coding","study"], category:"tech",
+          trailer:"https://www.youtube.com/results?search_query=how+to+learn+coding+fast" },
+        { id:"v_ds_algo", type:"video", title:"Data Structures & Algorithms (Starter)", tags:["interviews","dsa","practice"], category:"tech",
+          trailer:"https://www.youtube.com/results?search_query=data+structures+algorithms+beginner" },
+        { id:"v_focus", type:"video", title:"Deep Focus / Study With Me", tags:["focus","study","productivity"], category:"motivation",
+          trailer:"https://www.youtube.com/results?search_query=deep+focus+study+with+me" },
+        { id:"v_fifa_tips", type:"video", title:"FIFA Skills & Gameplay Tips", tags:["fifa","skills","gaming"], category:"gaming",
+          trailer:"https://www.youtube.com/results?search_query=fifa+skills+tutorial" }
+      ]
+    };
+  </script>
+</body>
+</html>
